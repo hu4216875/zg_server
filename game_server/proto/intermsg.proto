@@ -1,0 +1,146 @@
+syntax = "proto3";
+package msg;
+
+option go_package = "./msg";
+
+message RequestInterServerInfo {
+  uint32 ServerId = 1;
+  uint32 ServerType = 2;
+  uint32 OnLineNum = 3;
+}
+
+message ResponseInterServerInfo {
+  int32 Result = 1;
+}
+
+message ReqeustInterGs2BattlHallEnter {
+  int64 AccountId = 1;
+  uint32 GsServerId = 2;
+}
+
+message ResponseInterGs2BattlHallEnter {
+  int32 Result = 1;
+  uint32 SceneServerId = 2;
+  int64 AccountId = 3;
+}
+
+message RequestInterBattlHall2SceneEnter {
+  int64 AccountId = 1;
+  uint32 GsServerId = 2;
+}
+
+message ResponseInterBattlHall2SceneEnter {
+  int32 Result = 1;
+  int64 AccountId = 2;
+  uint32 GsServerId = 3;
+  uint32 SceneId = 4;
+}
+
+message ReqeustInterGs2BattlHallLeave {
+  int64 AccountId = 1;
+  uint32 GsServerId = 2;
+  uint32 SceneServerId = 3;
+}
+
+message ResponseInterGs2BattlHallLeave {
+  int32 Result = 1;
+  int64 AccountId = 2;
+  uint32 SceneServerID = 3;
+}
+
+message RequestInterBattlHall2SceneLeave {
+  int64 AccountId = 1;
+  uint32 GsServerId = 2;
+  uint32 SceneServerId = 3;
+}
+
+message ResponseInterBattlHall2SceneLeave {
+  int32 Result = 1;
+  int64 AccountId = 2;
+  uint32 GsServerId = 3;
+  uint32 SceneServerId = 4;
+}
+
+message RequestInterGetOreInfo {
+  uint32 ServerId = 1;
+  int64 AccountId = 2;
+  uint32 OreId = 3;
+}
+
+message ResponseInterGetOreInfo {
+  int32 Result = 1;
+  int64 AccountId = 2;
+  uint32 OreId = 3;
+  uint32 Total = 4;
+  uint32 EndTime = 5;
+}
+
+message RequestInterAddOrePlayer {
+  uint32 OreId = 1;
+  int64 AccountId = 2;
+  uint32 ServerId = 3;
+  uint32 Speed = 4;
+}
+
+message ResponseInterAddOrePlayer {
+  int32 Result = 1;
+  uint32 OreId = 2;
+  int64 AccountId = 3;
+  uint32 EndTime = 4;
+  uint32 Total = 5;
+  uint32 Speed = 6;
+  uint32 StartTime = 7;
+}
+
+message RequestInterUpdateOrePlayer {
+  uint32 OreId = 1;
+  int64 AccountId = 2;
+  uint32 Speed = 3;
+}
+
+message ResponseInterUpdateOrePlayer {
+  int32 Result = 1;
+  int64 AccountId = 2;
+  uint32 OreId = 3;
+  uint32 Num = 4;
+  uint32 EndTime = 5;
+  uint32 Total = 6;
+  uint32 Speed = 7;
+  uint32 StartTime = 8;
+}
+
+message RequestInterSettleOrePlayer {
+  int64 AccountId = 1;
+  uint32 OreId = 2;
+}
+
+message ResponseInterSettleOrePlayer {
+  uint32 Result = 1;
+  int64 AccountId = 2;
+  uint32 OreId = 3;
+  uint32 Num = 4;
+  uint32 EndTime = 5;
+  uint32 Total = 6;
+}
+
+
+message RequestInterTransMessage {
+  uint32 SrcGsId = 1;
+  uint32 DestGsId = 2;
+  uint32 MsgId = 3;
+  bytes  Data = 4;
+}
+
+message RequestInterAddFri {
+  int64 SrcAccountId = 1;
+  uint32 SrcGsId = 2;
+  int64 DestAccountId = 3;
+  uint32 DestGsId = 4;
+}
+
+
+
+
+
+
+

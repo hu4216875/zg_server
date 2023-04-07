@@ -1,0 +1,161 @@
+syntax = "proto3";
+package msg;
+
+option go_package = "./msg";
+
+message RequestGMCommand {
+  int32 CommandId = 1;
+  string Content = 2;
+}
+
+message ResponseGMCommand {
+  int32 Result = 1;
+}
+
+message RequestRegist {
+  string UserId = 1;
+  string Passwd = 2;
+}
+
+message ResponseRegist {
+  int32 Result = 1;
+}
+
+message RequestLogin {
+  int32 Version = 1;
+  string UserId = 2;
+  string Passwd = 3;
+}
+
+message ResponseLogin {
+  int32 Result = 1;
+}
+
+message RequestLogout {
+}
+
+message ResponseLogout {
+  int32 Result = 1;
+}
+
+message ResponseKickOut {
+  int32 Result = 2;
+}
+
+message Item {
+  uint32 ItemId = 1;
+  uint32 ItemNum = 2;
+  uint32 LimitDate = 3;
+}
+
+message RequestLoadItems {
+}
+
+message ResponseLoadItems {
+  int32 Result = 1;
+  repeated Item Items = 2;
+}
+
+message NotifyUpdateItem {
+  repeated Item Items = 1;
+}
+
+message Task {
+  uint32 TaskId = 1;
+  uint32 TaskValue = 2;
+  uint32 TaskState = 3;
+  uint32 ComplteTime = 4;
+}
+
+message RequestLoadTasks {
+}
+
+message ResponseLoadTasks {
+  int32 Result = 1;
+  repeated Task  Tasks = 2;
+}
+
+message NotifyUpdateTask {
+  repeated Task Tasks = 1;
+}
+
+message RequestClientHeart {
+}
+
+message ResponseClientHert {
+  int32 Result = 1;
+}
+
+message RequestOreInfo {
+
+}
+
+message ResponseOreInfo {
+  int32 Result = 1;
+  uint32 OreId = 2;
+  uint32 StartTime = 3;
+  uint32 Speed = 4;
+}
+
+message RequestOreTotal {
+}
+
+message ResponseOreTotal {
+  int32 Result = 1;
+  uint32 OreId = 2;
+  uint32 Total = 3;
+}
+
+message RequestStartOre {
+}
+
+message ResponseStartOre {
+  int32 Result = 1;
+  uint32 StartTime = 2;
+  uint32 Total = 3;
+  uint32 EndTime = 4;
+}
+
+message RequestEndOre {
+}
+
+message ResponseEndOre {
+  int32 Result = 1;
+  uint32 Total = 2;
+  uint32 EndTime = 3;
+}
+
+message RequestUpgradeOreSpeed {
+}
+
+message ResponseUpgradeOreSpeed {
+  int32 Result = 1;
+  uint32 StartTime = 2;
+  uint32 Speed = 3;
+  uint32 Total = 4;
+  uint32 EndTime = 5;
+}
+
+message RequestEnterBattle {
+}
+
+message ResponseEnterBattle {
+  int32 Result = 1;
+}
+
+message RequestLeaveBattle {
+}
+
+message ResponseLeaveBattle {
+  int32 Result = 1;
+}
+
+message RequestAddFri {
+  int64 AccountId = 1;
+  uint32 DestGsId = 2;
+}
+
+message ResponseAddFri {
+  uint32 Result = 1;
+}
+

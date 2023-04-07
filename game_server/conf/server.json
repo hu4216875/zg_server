@@ -1,0 +1,15 @@
+{
+	"ServerId": 1,
+	"LogLevel": "debug",
+	"LogPath": "",
+	"TCPAddr": "192.168.5.8:3563",
+	"WSAddr": "127.0.0.1:3653",
+	"MaxConnNum": 20000,
+	"MaxLocalMongoDBConn": 100,
+	"LocalMongoDBUrl": "mongodb://localhost:27017",
+	"MaxGlobalMongoDBConn": 5,
+	"GlobalMongoDBUrl": "mongodb://localhost:27017",
+	"GameDataPath": "./gamedata/",
+	"EtcdServer": ["http://localhost:2379"],
+	"MaxRegistNum": 5000
+}
