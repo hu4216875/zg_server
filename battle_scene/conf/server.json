@@ -1,0 +1,9 @@
+{
+	"ServerId": 2000,
+	"LogLevel": "debug",
+	"LogPath": "",
+	"TCPAddr": "192.168.5.8:2000",
+	"MaxConnNum": 20000,
+	"EtcdServerAddr":["http://localhost:2379"],
+	"MaxOnlineNum": 1000
+}
