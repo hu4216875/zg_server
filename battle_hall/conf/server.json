@@ -1,0 +1,11 @@
+{
+	"ServerId": 1000,
+	"LogLevel": "debug",
+	"LogPath": "",
+	"TCPAddr": "192.168.5.8:5000",
+	"MaxConnNum": 20000,
+	"MaxMongoDbConn" : 10,
+	"MongoDbUrl": "mongodb://localhost:27017",
+	"EtcdServerAddr":["http://localhost:2379"],
+	"HttpServer": "192.168.5.8:50000"
+}
